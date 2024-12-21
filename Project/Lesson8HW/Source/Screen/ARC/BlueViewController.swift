@@ -20,6 +20,10 @@ class BlueViewController: UIViewController {
     func textToPrint() -> String {
         return "🚙 - синє таксі у дорозі"
     }
+    
+    deinit {
+        print("Blue screen deinit")
+    }
 }
 
 //MARK: - Private
@@ -46,4 +50,6 @@ private extension BlueViewController {
         
         printer.startPrinting()
     }
+    
+    
 }

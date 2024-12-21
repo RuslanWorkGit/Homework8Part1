@@ -20,6 +20,10 @@ class RedViewController: UIViewController {
     func textToPrint() -> String {
         return "🚗 - червоне таксі у дорозі"
     }
+    
+    deinit {
+        print("Red screen deinit")
+    }
 }
 
 //MARK: - Private

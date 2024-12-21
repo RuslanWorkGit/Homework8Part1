@@ -20,6 +20,10 @@ class YellowViewController: UIViewController {
     func textToPrint() -> String {
         return "🚖 - жовте таксі у дорозі"
     }
+    
+    deinit {
+        print("Yellow screen deinit")
+    }
 }
 
 //MARK: - Private
@@ -46,4 +50,6 @@ private extension YellowViewController {
         
         printer.startPrinting()
     }
+    
+
 }
