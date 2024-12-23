@@ -13,8 +13,14 @@ class YellowViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        printer = Printer()
+        printer.delegate = self
+        printer.startPrinting()
+        
+        
         setupUI()
-        setup()
+        //setup()
     }
     
     func textToPrint() -> String {
@@ -45,11 +51,23 @@ private extension YellowViewController {
     
     func setup() {
         
-        printer = Printer()
-        printer.yellowViewController = self
+//        printer = Printer()
+//        printer.yel lowViewController = self
+//        
+//        printer.startPrinting()
         
-        printer.startPrinting()
+        
     }
     
 
+}
+
+extension YellowViewController: PrinterDelegate {
+    //let textToPrint = textToPrint()
+    
+    func printer(text: String) {
+        print("\(textToPrint()) - \(text)")
+    }
+    
+    
 }

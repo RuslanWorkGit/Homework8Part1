@@ -13,8 +13,13 @@ class RedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        printer = Printer()
+        printer.delegate = self
+        printer.startPrinting()
+        
         setupUI()
-        setup()
+//        setup()
     }
     
     func textToPrint() -> String {
@@ -43,11 +48,19 @@ private extension RedViewController {
         taxiLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
-    func setup() {
-        
-        printer = Printer()
-        printer.redViewController = self
-        
-        printer.startPrinting()
+//    func setup() {
+//        
+//        printer = Printer()
+//        printer.redViewController = self
+//        
+//        printer.startPrinting()
+//    }
+}
+
+extension RedViewController: PrinterDelegate {
+    func printer(text: String) {
+        print("\(textToPrint()) - \(text)")
     }
+    
+    
 }
