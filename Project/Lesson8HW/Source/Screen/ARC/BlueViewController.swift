@@ -19,7 +19,6 @@ class BlueViewController: UIViewController {
         printer.startPrinting()
         
         setupUI()
-//        setup()
     }
     
     func textToPrint() -> String {
@@ -47,14 +46,7 @@ private extension BlueViewController {
         taxiLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         taxiLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
-//    
-//    func setup() {
-//        
-//        printer = Printer()
-//        printer.blueViewController = self
-//        
-//        printer.startPrinting()
-//    }
+
     
     
 }

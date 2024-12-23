@@ -20,7 +20,6 @@ class YellowViewController: UIViewController {
         
         
         setupUI()
-        //setup()
     }
     
     func textToPrint() -> String {
@@ -49,17 +48,6 @@ private extension YellowViewController {
         taxiLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
-    func setup() {
-        
-//        printer = Printer()
-//        printer.yel lowViewController = self
-//        
-//        printer.startPrinting()
-        
-        
-    }
-    
-
 }
 
 extension YellowViewController: PrinterDelegate {

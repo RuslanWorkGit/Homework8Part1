@@ -19,7 +19,6 @@ class RedViewController: UIViewController {
         printer.startPrinting()
         
         setupUI()
-//        setup()
     }
     
     func textToPrint() -> String {
@@ -48,13 +47,6 @@ private extension RedViewController {
         taxiLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
-//    func setup() {
-//        
-//        printer = Printer()
-//        printer.redViewController = self
-//        
-//        printer.startPrinting()
-//    }
 }
 
 extension RedViewController: PrinterDelegate {
