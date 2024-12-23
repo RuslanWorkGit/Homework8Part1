@@ -17,10 +17,6 @@ class Printer {
     
     weak var delegate: PrinterDelegate?
     
-//    weak var yellowViewController: YellowViewController?
-//    weak var blueViewController: BlueViewController?
-//    weak var redViewController: RedViewController?
-    
     private var timer: Timer?
     private var seconds: Int = 0
     
@@ -48,19 +44,6 @@ class Printer {
     @objc private func timerAction() {
         
         let secondsText = "\(seconds) секунд"
-//        
-//        if let textToPrint = yellowViewController?.textToPrint() {
-//            print("\(textToPrint) \(secondsText)")
-//        }
-//        
-//        if let textToPrint = blueViewController?.textToPrint() {
-//            print("\(textToPrint) \(secondsText)")
-//        }
-//        
-//        if let textToPrint = redViewController?.textToPrint() {
-//            print("\(textToPrint) \(secondsText)")
-//        }
-//
         delegate?.printer(text: secondsText)
         
         seconds += 1
